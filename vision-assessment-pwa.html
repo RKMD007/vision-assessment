@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover your perfect vision correction solution with Khanna Vision Institute's interactive assessment tool">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Vision Assessment">
+    
+    <title>Vision Correction Assessment - Khanna Vision Institute</title>
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIktoYW5uYSBWaXNpb24gSW5zdGl0dXRlIEFzc2Vzc21lbnQiLAogICJzaG9ydF9uYW1lIjogIlZpc2lvbiBBc3Nlc3NtZW50IiwKICAiZGVzY3JpcHRpb24iOiAiRGlzY292ZXIgeW91ciBwZXJmZWN0IHZpc2lvbiBjb3JyZWN0aW9uIHNvbHV0aW9uIiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAogICJ0aGVtZV9jb2xvciI6ICIjNjY3ZWVhIiwKICAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBeE9USWdNVGt5SWo0OFkybHlZMnhsSUdONFBTSTVOaUlnWTNrOUlqazJJaUJ5UFNJNE1DSWdabWxzYkQwaUl6WTJOMlZsWVNJdlBqeDBaWGgwSUhnOUlqazJJaUI1UFNJNU5pSWdabTl1ZEMxemFYcGxQU0kzTWlJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSWdabWxzYkQwaUkzZG9hWFJsSWo0aU8wVjVaVHNpUEM5MFpYaDBQand2YzNablBnPT0iLAogICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9LAogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0ExTVRJZ05URXlJajQ4WTJseVkyeGxJR000UFNJMU1UWWlJR041UFNJMU1UWWlJSEk5SWpJd01DSWdabWxzYkQwaUl6WTJOMFZGUVNJDLZ6eDBaWGgwSUhnOUlqVXhOaUlnZVQwaU5URTJJaUJtYjI1MExYTnBlbVU5SWpFME5DSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm1sc2JEMGlJM2RvYVhSbElqNGlPMFY1WlRzaVBDOTBaWGgwUGp3dmMzWm5QZz09IiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfQogIF0KfQ==">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* PWA Install Banner */
+        .install-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            display: none;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            animation: slideUp 0.5s ease;
+        }
+
+        .install-banner.show {
+            display: flex;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateX(-50%) translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .install-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .install-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .close-banner {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #718096;
+            padding: 5px;
+        }
+
+        /* Offline Indicator */
+        .offline-indicator {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f56565;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(245, 101, 101, 0.3);
+        }
+
+        .offline-indicator.show {
+            display: flex;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateX(-50%) translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Animated background elements */
+        .bg-decoration {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .bg-decoration:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            left: -150px;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+            animation-delay: 0s;
+        }
+
+        .bg-decoration:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%);
+            animation-delay: 5s;
+        }
+
+        .bg-decoration:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            top: 50%;
+            right: -125px;
+            background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%);
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(30px) rotate(240deg); }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            position: relative;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Decorative top gradient bar */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, 
+                #667eea 0%, 
+                #764ba2 25%, 
+                #f093fb 50%, 
+                #f5576c 75%, 
+                #667eea 100%);
+            background-size: 200% 100%;
+            border-radius: 24px 24px 0 0;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 35px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-eye {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #f5576c 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes pulseBadge {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+            50% { transform: scale(1.1); box-shadow: 0 0 0 5px rgba(255, 193, 7, 0); }
+        }
+
+        .logo-eye::before {
+            content: '👁️';
+            font-size: 50px;
+            filter: brightness(0) invert(1);
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .progress-container {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            position: relative;
+        }
+
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            width: 100%;
+            height: 2px;
+            background: #e2e8f0;
+            z-index: -1;
+        }
+
+        .step.completed:not(:last-child)::after {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .step-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #a0aec0;
+            transition: all 0.3s ease;
+        }
+
+        .step.active .step-circle,
+        .step.completed .step-circle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .step.completed .step-circle::before {
+            content: '✓';
+        }
+
+        .step-label {
+            font-size: 11px;
+            color: #718096;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .question-container {
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+
+        .question-container.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .question {
+            font-size: 22px;
+            color: #2d3748;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .question-helper {
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            margin: -20px 0 25px 0;
+            font-style: italic;
+        }
+
+        .options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .option-btn {
+            background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px;
+            font-size: 16px;
+            color: #2d3748;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-btn:hover {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .option-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .option-btn:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .option-icon {
+            font-size: 24px;
+            margin-right: 12px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .option-text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .prescription-note {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .checkbox-option:hover {
+            background: #edf2f7;
+            border-color: #667eea;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-option label {
+            cursor: pointer;
+            color: #2d3748;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            gap: 15px;
+        }
+
+        .nav-btn {
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            flex: 1;
+        }
+
+        .nav-btn.back {
+            background: #edf2f7;
+            color: #4a5568;
+        }
+
+        .nav-btn.back:hover {
+            background: #e2e8f0;
+        }
+
+        .nav-btn.next {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn.next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-btn.next::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-btn.next:hover::before {
+            left: 100%;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .result-container {
+            display: none;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .result-container.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 35px;
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .result-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .result-match {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .result-description {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefits {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefits h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefits ul {
+            list-style: none;
+        }
+
+        .benefits li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .benefits li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-title {
+            color: #2d3748;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .cta-subtitle {
+            color: #718096;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons {
+            display: grid;
+            gap: 12px;
+        }
+
+        .cta-btn {
+            padding: 16px 30px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .cta-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-btn.secondary {
+            background: #f7fafc;
+            color: #4a5568;
+            border: 2px solid #e2e8f0;
+        }
+
+        .cta-btn.secondary:hover {
+            background: #edf2f7;
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .phone-numbers {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #718096;
+        }
+
+        .restart-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 24px;
+            background: transparent;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            color: #667eea;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .restart-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: transparent;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Loading animation */
+        .analyzing {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .analyzing.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #e2e8f0;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+
+            .question {
+                font-size: 20px;
+            }
+
+            .step-label {
+                display: none;
+            }
+
+            .step-circle {
+                width: 25px;
+                height: 25px;
+                font-size: 11px;
+            }
+
+            .progress-steps {
+                padding: 0 10px;
+            }
+
+            .install-banner {
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                transform: none;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PWA Install Banner -->
+    <div class="install-banner" id="installBanner">
+        <div>
+            <strong>📱 Install App</strong>
+            <div style="font-size: 12px; color: #718096;">Use offline & get faster access</div>
+        </div>
+        <button class="install-btn" id="installBtn">Install</button>
+        <button class="close-banner" id="closeBanner">✕</button>
+    </div>
+
+    <!-- Offline Indicator -->
+    <div class="offline-indicator" id="offlineIndicator">
+        <span>📡</span>
+        <span>You're offline - Your progress is saved</span>
+    </div>
+
+    <div class="bg-decoration"></div>
+    <div class="bg-decoration"></div>
+    <div class="bg-decoration"></div>
+
+    <div class="container">
+        <div class="logo">
+            <div class="logo-eye"></div>
+            <h1>Khanna Vision Institute</h1>
+            <div class="subtitle">Discover Your Perfect Vision Solution</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-steps">
+                <div class="step active" id="step1">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Age</div>
+                </div>
+                <div class="step" id="step2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Vision</div>
+                </div>
+                <div class="step" id="step3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Lifestyle</div>
+                </div>
+                <div class="step" id="step4">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Activities</div>
+                </div>
+                <div class="step" id="step5">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Health</div>
+                </div>
+                <div class="step" id="step6">
+                    <div class="step-circle">6</div>
+                    <div class="step-label">Medical</div>
+                </div>
+                <div class="step" id="step7">
+                    <div class="step-circle">7</div>
+                    <div class="step-label">Goals</div>
+                </div>
+                <div class="step" id="step8">
+                    <div class="step-circle">8</div>
+                    <div class="step-label">Finance</div>
+                </div>
+                <div class="step" id="step9">
+                    <div class="step-circle">9</div>
+                    <div class="step-label">Results</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 1: Age -->
+        <div class="question-container active" id="q1">
+            <div class="question">What's your age?</div>
+            <div class="question-helper">This helps us recommend age-appropriate procedures</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(1, '18-25')">
+                    <span class="option-icon">🎓</span>
+                    <span class="option-text">18-25 years</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, '25-45')">
+                    <span class="option-icon">💼</span>
+                    <span class="option-text">25-45 years</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, '45-65')">
+                    <span class="option-icon">🏆</span>
+                    <span class="option-text">45-65 years</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, '65+')">
+                    <span class="option-icon">👑</span>
+                    <span class="option-text">65+ years</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Question 2: Prescription -->
+        <div class="question-container" id="q2">
+            <div class="question">What is your current prescription?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(2, 'nearsighted-mild')">
+                    <span class="option-text">
+                        <strong>Nearsighted (0 to -6)</strong>
+                        <div class="prescription-note">Can see near, not far</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'nearsighted-extreme')">
+                    <span class="option-text">
+                        <strong>Extremely Nearsighted (-6 to -20)</strong>
+                        <div class="prescription-note">Cannot see more than an arm's length</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'hyperopic-mild')">
+                    <span class="option-text">
+                        <strong>Farsighted (0 to +6)</strong>
+                        <div class="prescription-note">Can see far, not near</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'hyperopic-extreme')">
+                    <span class="option-text">
+                        <strong>Extremely Farsighted (+6 to +10)</strong>
+                        <div class="prescription-note">Can see far, not middle or near</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'bifocals')">
+                    <span class="option-text">
+                        <strong>Bifocals/Progressive</strong>
+                        <div class="prescription-note">Cannot see far nor near clearly</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(2, 'astigmatism')">
+                    <span class="option-text">
+                        <strong>Astigmatism</strong>
+                        <div class="prescription-note">Blurry vision at all distances</div>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Question 3: Lifestyle -->
+        <div class="question-container" id="q3">
+            <div class="question">Which best describes your lifestyle?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(3, 'very-active')">
+                    <span class="option-icon">🏃‍♂️</span>
+                    <span class="option-text">Very Active - Sports & outdoor activities daily</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(3, 'moderately-active')">
+                    <span class="option-icon">🚴‍♀️</span>
+                    <span class="option-text">Moderately Active - Regular exercise & activities</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(3, 'office-professional')">
+                    <span class="option-icon">💻</span>
+                    <span class="option-text">Office Professional - Mostly computer work</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(3, 'mixed')">
+                    <span class="option-icon">⚖️</span>
+                    <span class="option-text">Mixed - Balance of desk work and activities</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Question 4: Activities -->
+        <div class="question-container" id="q4">
+            <div class="question">Select all activities that are important to you:</div>
+            <div class="checkbox-group">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="swimming" value="swimming">
+                    <label for="swimming">🏊 Swimming/Water Sports</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="contact-sports" value="contact-sports">
+                    <label for="contact-sports">🥊 Contact Sports</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="reading" value="reading">
+                    <label for="reading">📚 Reading</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="computer" value="computer">
+                    <label for="computer">💻 Computer Work</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="driving" value="driving">
+                    <label for="driving">🚗 Night Driving</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="detail-work" value="detail-work">
+                    <label for="detail-work">🔬 Detail Work</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="outdoor" value="outdoor">
+                    <label for="outdoor">🏔️ Outdoor Adventures</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="photography" value="photography">
+                    <label for="photography">📸 Photography</label>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button class="nav-btn back" onclick="previousQuestion(4)">Back</button>
+                <button class="nav-btn next" onclick="selectActivities()">Continue</button>
+            </div>
+        </div>
+
+        <!-- Question 5: Eye Health -->
+        <div class="question-container" id="q5">
+            <div class="question">Do you have any of these eye conditions?</div>
+            <div class="question-helper">Select all that apply</div>
+            <div class="checkbox-group">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="dry-eyes" value="dry-eyes">
+                    <label for="dry-eyes">Dry Eyes</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="cataracts" value="cataracts">
+                    <label for="cataracts">Cataracts</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="glaucoma" value="glaucoma">
+                    <label for="glaucoma">Glaucoma</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="keratoconus" value="keratoconus">
+                    <label for="keratoconus">Keratoconus</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="none" value="none">
+                    <label for="none">None of the above</label>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button class="nav-btn back" onclick="previousQuestion(5)">Back</button>
+                <button class="nav-btn next" onclick="selectConditions()">Continue</button>
+            </div>
+        </div>
+
+        <!-- Question 6: Medical Contraindications -->
+        <div class="question-container" id="q6">
+            <div class="question">Do any of these currently apply to you?</div>
+            <div class="question-helper">These are temporary conditions that may affect timing of your procedure</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(6, 'accutane')">
+                    <span class="option-icon">💊</span>
+                    <span class="option-text">Taking or recently took Accutane (within 6 months)</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(6, 'pregnant')">
+                    <span class="option-icon">🤰</span>
+                    <span class="option-text">Currently pregnant</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(6, 'breastfeeding')">
+                    <span class="option-icon">👶</span>
+                    <span class="option-text">Currently breastfeeding</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(6, 'none-medical')">
+                    <span class="option-icon">✅</span>
+                    <span class="option-text">None of these apply to me</span>
+                </button>
+            </div>
+            <div class="navigation-buttons" style="margin-top: 25px;">
+                <button class="nav-btn back" onclick="previousQuestion(6)" style="width: auto;">Back</button>
+            </div>
+        </div>
+
+        <!-- Question 7: Goals -->
+        <div class="question-container" id="q7">
+            <div class="question">What's your primary vision goal?</div>
+            <div class="options">
+                <button class="option-btn" onclick="selectAnswer(7, 'freedom')">
+                    <span class="option-icon">🎯</span>
+                    <span class="option-text">Complete freedom from glasses & contacts</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(7, 'reduce')">
+                    <span class="option-icon">👓</span>
+                    <span class="option-text">Reduce dependence on glasses</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(7, 'active')">
+                    <span class="option-icon">⚡</span>
+                    <span class="option-text">Better vision for active lifestyle</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(7, 'professional')">
+                    <span class="option-icon">💼</span>
+                    <span class="option-text">Enhanced vision for professional life</span>
+                </button>
+                <button class="option-btn" onclick="selectAnswer(7, 'presbyopia')">
+                    <span class="option-icon">📖</span>
+                    <span class="option-text">Eliminate reading glasses</span>
+                </button>
+            </div>
+            <div class="navigation-buttons" style="margin-top: 25px;">
+                <button class="nav-btn back" onclick="previousQuestion(7)" style="width: auto;">Back</button>
+            </div>
+        </div>
+
+        <!-- Question 8: Financing -->
+        <div class="question-container" id="q8">
+            <div class="question">How are you planning to invest in your vision?</div>
+            <div class="question-helper">Procedures range from $2,700-$5,000 per eye • Financing as low as $89/month</div>
+            <div class="options">
+                <button class="option-btn" onclick="finalizeAssessment('cash')">
+                    <span class="option-icon">💵</span>
+                    <span class="option-text">Pay in full (Often includes cash discount)</span>
+                </button>
+                <button class="option-btn" onclick="handleFinancing()" style="border: 3px solid #4CAF50; position: relative;">
+                    <span style="position: absolute; top: -10px; right: 10px; background: #4CAF50; color: white; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: bold;">MOST POPULAR</span>
+                    <span class="option-icon">💳</span>
+                    <span class="option-text">
+                        <strong>Monthly Financing with Alpheon</strong>
+                        <div class="prescription-note">0% APR available • Get pre-approved in 60 seconds • No effect on credit score to check</div>
+                    </span>
+                </button>
+                <button class="option-btn" onclick="finalizeAssessment('insurance')">
+                    <span class="option-icon">📋</span>
+                    <span class="option-text">Insurance/FSA/HSA</span>
+                </button>
+                <button class="option-btn" onclick="finalizeAssessment('undecided')">
+                    <span class="option-icon">🤔</span>
+                    <span class="option-text">Haven't decided yet</span>
+                </button>
+            </div>
+            <div class="navigation-buttons" style="margin-top: 25px;">
+                <button class="nav-btn back" onclick="previousQuestion(8)" style="width: auto;">Back</button>
+            </div>
+        </div>
+
+        <!-- Analyzing -->
+        <div class="analyzing" id="analyzing">
+            <div class="spinner"></div>
+            <h2 style="color: #2d3748; margin-bottom: 10px;">Analyzing Your Profile...</h2>
+            <p style="color: #718096;">Creating your personalized vision correction recommendation</p>
+        </div>
+
+        <!-- Results -->
+        <div class="result-container" id="results">
+            <div class="result-card">
+                <div class="result-match">🎯 Perfect Match Found!</div>
+                <div class="result-title" id="procedureName">Your Recommended Procedure</div>
+                <div class="result-description" id="procedureDescription">
+                    Based on your comprehensive assessment...
+                </div>
+                <div class="benefits">
+                    <h3>✨ Why This Is Perfect For You</h3>
+                    <ul id="benefitsList">
+                        <li>Tailored to your lifestyle</li>
+                        <li>Matches your vision goals</li>
+                        <li>Age-appropriate solution</li>
+                    </ul>
+                </div>
+                <div id="financingMessage" style="display: none; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 15px; margin-top: 15px;">
+                    <h4 style="margin-bottom: 10px;">💳 Smart Financing Available!</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">Great news! Alpheon Credit offers special financing for vision procedures:</p>
+                    <ul style="margin: 10px 0; font-size: 14px; padding-left: 20px;">
+                        <li>0% APR for up to 24 months for qualified applicants</li>
+                        <li>Flexible payment plans from $89-$250/month</li>
+                        <li>60-second pre-approval with no impact on credit score</li>
+                        <li>Use for any amount not covered by insurance</li>
+                    </ul>
+                    <p style="font-size: 13px; font-style: italic;">Click the green button below to get pre-approved now!</p>
+                </div>
+            </div>
+
+            <div id="contraindicationMessage" style="display: none; background: #fff3cd; border-radius: 15px; padding: 25px; margin-bottom: 20px; border: 2px solid #ffc107;">
+                <h3 style="color: #856404; margin-bottom: 10px;">⏰ Timing Consideration</h3>
+                <p style="color: #856404;" id="contraindicationText">Based on your current situation, we'll need to schedule your procedure at the optimal time for the best results.</p>
+            </div>
+
+            <div class="cta-section">
+                <div class="cta-title">Ready to Transform Your Vision?</div>
+                <div class="cta-subtitle">Join thousands who've achieved visual freedom with Dr. Khanna</div>
+                <div class="cta-buttons">
+                    <button class="cta-btn primary" onclick="scheduleConsultation()">
+                        📅 Schedule Your Free Consultation
+                    </button>
+                    <button class="cta-btn secondary" onclick="callNow()">
+                        📞 Speak with Our Team Now
+                    </button>
+                    <button id="financingBtn" class="cta-btn" style="display: none; background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); color: white; border: none; position: relative; overflow: hidden;" onclick="applyForFinancing()">
+                        <span style="position: relative; z-index: 1;">💳 Complete Alpheon Pre-Approval Now</span>
+                        <span style="position: absolute; top: -5px; right: 10px; background: #FFC107; color: #333; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: bold; animation: pulseBadge 1.5s infinite;">60 SEC</span>
+                    </button>
+                </div>
+                <div class="phone-numbers">
+                    Beverly Hills: (310) 482-1240 | Westlake Village: (805) 230-2126
+                </div>
+            </div>
+
+            <button class="restart-btn" onclick="restart()">Take Assessment Again</button>
+        </div>
+    </div>
+
+    <script>
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register(getServiceWorkerURL())
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed'));
+            });
+        }
+
+        function getServiceWorkerURL() {
+            const swCode = `
+                const CACHE_NAME = 'vision-assessment-v1';
+                const urlsToCache = [
+                    '/',
+                    '/index.html'
+                ];
+
+                self.addEventListener('install', event => {
+                    event.waitUntil(
+                        caches.open(CACHE_NAME)
+                            .then(cache => cache.addAll(urlsToCache))
+                    );
+                });
+
+                self.addEventListener('fetch', event => {
+                    event.respondWith(
+                        caches.match(event.request)
+                            .then(response => response || fetch(event.request))
+                    );
+                });
+
+                self.addEventListener('activate', event => {
+                    event.waitUntil(
+                        caches.keys().then(cacheNames => {
+                            return Promise.all(
+                                cacheNames.map(cacheName => {
+                                    if (cacheName !== CACHE_NAME) {
+                                        return caches.delete(cacheName);
+                                    }
+                                })
+                            );
+                        })
+                    );
+                });
+            `;
+            const blob = new Blob([swCode], { type: 'application/javascript' });
+            return URL.createObjectURL(blob);
+        }
+
+        // PWA Install Prompt
+        let deferredPrompt;
+        const installBanner = document.getElementById('installBanner');
+        const installBtn = document.getElementById('installBtn');
+        const closeBanner = document.getElementById('closeBanner');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBanner.classList.add('show');
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                deferredPrompt = null;
+                installBanner.classList.remove('show');
+            }
+        });
+
+        closeBanner.addEventListener('click', () => {
+            installBanner.classList.remove('show');
+        });
+
+        // Offline Detection
+        const offlineIndicator = document.getElementById('offlineIndicator');
+
+        window.addEventListener('online', () => {
+            offlineIndicator.classList.remove('show');
+        });
+
+        window.addEventListener('offline', () => {
+            offlineIndicator.classList.add('show');
+        });
+
+        // Assessment Logic
+        let assessment = {
+            age: '',
+            prescription: '',
+            lifestyle: '',
+            activities: [],
+            conditions: [],
+            medicalStatus: '',
+            goal: '',
+            financing: ''
+        };
+
+        let currentQuestion = 1;
+
+        const procedures = {
+            'SMILE': {
+                description: 'SMILE (Small Incision Lenticule Extraction) represents the pinnacle of laser vision correction technology. This minimally invasive procedure is perfect for your active lifestyle and prescription range, offering the quickest recovery with maximum precision.',
+                benefits: [
+                    'Smallest incision - only 2-4mm',
+                    'Back to normal activities in 24 hours',
+                    'No flap-related complications ever',
+                    'Ideal for athletes and active individuals',
+                    'Latest FDA-approved laser technology',
+                    'Preserves corneal strength'
+                ]
+            },
+            'EVO ICL': {
+                description: 'EVO ICL (Implantable Collamer Lens) is the revolutionary solution for high prescriptions. This biocompatible lens works with your natural eye, providing crisp HD vision while being completely reversible if ever needed.',
+                benefits: [
+                    'Reversible and removable',
+                    'Perfect for extreme prescriptions',
+                    'Built-in UV protection',
+                    'No dry eye issues',
+                    'Sharpest possible vision quality',
+                    'Preserves accommodation for younger patients'
+                ]
+            },
+            'Custom LASIK': {
+                description: 'Our advanced Custom LASIK uses wavefront technology to create a treatment unique to your eyes. Perfect for your prescription range, it delivers excellent outcomes with proven long-term results.',
+                benefits: [
+                    'Customized to your unique vision',
+                    '20-minute procedure for both eyes',
+                    'Rapid visual recovery',
+                    'Treats wide range of prescriptions',
+                    'Proven 30+ year track record',
+                    'Advanced eye tracking technology'
+                ]
+            },
+            'Hyperopic LASIK': {
+                description: 'Specialized LASIK designed specifically for farsightedness. Using advanced ablation patterns, we reshape your cornea to provide clear vision at all distances, eliminating your dependence on glasses.',
+                benefits: [
+                    'Specifically optimized for hyperopia',
+                    'Quick 15-minute procedure',
+                    'Improved near and distance vision',
+                    'Minimal recovery time',
+                    'Customized treatment zones',
+                    'Long-lasting results'
+                ]
+            },
+            'PIE': {
+                description: 'Presbyopic Implants in Eye (PIE) provide the ultimate vision solution for presbyopia and challenging prescriptions. These advanced multifocal lenses give you crisp vision at all distances - near, intermediate, and far - without glasses.',
+                benefits: [
+                    'Complete spectacle independence',
+                    'Clear vision at ALL distances',
+                    'No more progressive lenses',
+                    'Permanent presbyopia solution',
+                    'Latest generation lens technology',
+                    'Reduces future cataract surgery need'
+                ]
+            },
+            'Robotic Cataract + PIE': {
+                description: 'Experience the future of vision with our robotic laser cataract surgery combined with premium presbyopic implants. This computer-guided procedure not only removes cataracts but gives you the best possible vision for your lifestyle.',
+                benefits: [
+                    'Bladeless laser precision',
+                    'Computer-controlled accuracy',
+                    'Premium multifocal implants',
+                    'Restore youthful vision',
+                    'Lifetime vision solution',
+                    'Astigmatism correction included'
+                ]
+            },
+            'Cross-linking + Custom': {
+                description: 'For keratoconus patients, we offer advanced corneal cross-linking combined with customized vision correction. This dual approach strengthens your cornea while optimizing your vision.',
+                benefits: [
+                    'Stops keratoconus progression',
+                    'Strengthens corneal structure',
+                    'Improves visual clarity',
+                    'Reduces irregular astigmatism',
+                    'May avoid corneal transplant',
+                    'Combined with topography-guided treatment'
+                ]
+            }
+        };
+
+        // Save assessment to localStorage
+        function saveAssessment() {
+            try {
+                const assessmentData = {
+                    assessment: assessment,
+                    currentQuestion: currentQuestion,
+                    timestamp: new Date().toISOString()
+                };
+                // Note: In a production PWA, you'd save to IndexedDB instead
+                console.log('Assessment saved:', assessmentData);
+            } catch (e) {
+                console.log('Unable to save assessment');
+            }
+        }
+
+        function updateProgress(step) {
+            for (let i = 1; i <= 9; i++) {
+                const stepEl = document.getElementById(`step${i}`);
+                if (i < step) {
+                    stepEl.classList.add('completed');
+                    stepEl.classList.remove('active');
+                } else if (i === step) {
+                    stepEl.classList.add('active');
+                    stepEl.classList.remove('completed');
+                } else {
+                    stepEl.classList.remove('active', 'completed');
+                }
+            }
+        }
+
+        function selectAnswer(questionNum, answer) {
+            if (questionNum === 1) {
+                assessment.age = answer;
+                currentQuestion = 2;
+                showQuestion(2);
+            } else if (questionNum === 2) {
+                assessment.prescription = answer;
+                currentQuestion = 3;
+                showQuestion(3);
+            } else if (questionNum === 3) {
+                assessment.lifestyle = answer;
+                currentQuestion = 4;
+                showQuestion(4);
+            } else if (questionNum === 6) {
+                assessment.medicalStatus = answer;
+                currentQuestion = 7;
+                showQuestion(7);
+            } else if (questionNum === 7) {
+                assessment.goal = answer;
+                currentQuestion = 8;
+                showQuestion(8);
+            }
+            saveAssessment();
+        }
+
+        function selectActivities() {
+            const checkboxes = document.querySelectorAll('#q4 input[type="checkbox"]:checked');
+            assessment.activities = Array.from(checkboxes).map(cb => cb.value);
+            currentQuestion = 5;
+            showQuestion(5);
+            saveAssessment();
+        }
+
+        function selectConditions() {
+            const checkboxes = document.querySelectorAll('#q5 input[type="checkbox"]:checked');
+            assessment.conditions = Array.from(checkboxes).map(cb => cb.value);
+            currentQuestion = 6;
+            showQuestion(6);
+            saveAssessment();
+        }
+
+        function handleFinancing() {
+            assessment.financing = 'alpheon';
+            window.open('https://www.alpheoncredit.com/apply', '_blank');
+            finalizeAssessment('financing');
+        }
+
+        function applyForFinancing() {
+            window.open('https://www.alpheoncredit.com/apply', '_blank');
+        }
+
+        function showQuestion(num) {
+            document.querySelectorAll('.question-container').forEach(q => {
+                q.classList.remove('active');
+            });
+            
+            document.getElementById(`q${num}`).classList.add('active');
+            updateProgress(num);
+        }
+
+        function previousQuestion(currentQ) {
+            if (currentQ > 1) {
+                currentQuestion = currentQ - 1;
+                showQuestion(currentQuestion);
+            }
+        }
+
+        function finalizeAssessment(financing) {
+            assessment.financing = financing;
+            
+            document.getElementById('q8').classList.remove('active');
+            document.getElementById('analyzing').classList.add('active');
+            updateProgress(9);
+            
+            setTimeout(() => {
+                showResults();
+            }, 2000);
+        }
+
+        function determineOptimalProcedure() {
+            const { age, prescription, lifestyle, activities, conditions, goal } = assessment;
+            
+            if (conditions.includes('keratoconus')) {
+                return 'Cross-linking + Custom';
+            }
+            
+            if (conditions.includes('cataracts') || age === '65+') {
+                return 'Robotic Cataract + PIE';
+            }
+            
+            if (age === '45-65') {
+                if (goal === 'presbyopia' || prescription === 'bifocals' || prescription === 'hyperopic-extreme') {
+                    return 'PIE';
+                }
+                if (prescription === 'nearsighted-extreme') {
+                    return 'PIE';
+                }
+            }
+            
+            if (prescription === 'nearsighted-mild') {
+                if (lifestyle === 'very-active' || activities.includes('contact-sports')) {
+                    return 'SMILE';
+                }
+                return 'SMILE';
+            }
+            
+            if (prescription === 'nearsighted-extreme') {
+                return 'EVO ICL';
+            }
+            
+            if (prescription === 'hyperopic-mild') {
+                return 'Hyperopic LASIK';
+            }
+            
+            if (prescription === 'hyperopic-extreme' || prescription === 'bifocals') {
+                return 'PIE';
+            }
+            
+            if (prescription === 'astigmatism') {
+                if (lifestyle === 'very-active') {
+                    return 'SMILE';
+                }
+                return 'Custom LASIK';
+            }
+            
+            if (age === '18-25' || age === '25-45') {
+                if (lifestyle === 'very-active' || activities.includes('swimming')) {
+                    return 'SMILE';
+                }
+                return 'Custom LASIK';
+            }
+            
+            return 'Custom LASIK';
+        }
+
+        function showResults() {
+            document.getElementById('analyzing').classList.remove('active');
+            
+            const procedure = determineOptimalProcedure();
+            const procedureData = procedures[procedure];
+            
+            document.getElementById('procedureName').textContent = procedure;
+            document.getElementById('procedureDescription').textContent = procedureData.description;
+            
+            const benefitsList = document.getElementById('benefitsList');
+            benefitsList.innerHTML = procedureData.benefits
+                .map(benefit => `<li>${benefit}</li>`)
+                .join('');
+            
+            if (assessment.medicalStatus === 'accutane') {
+                document.getElementById('contraindicationMessage').style.display = 'block';
+                document.getElementById('contraindicationText').innerHTML = 'Since you\'re currently taking or recently took Accutane, we\'ll need to wait 6 months after your last dose for optimal healing. Our team will work with you to plan the perfect timing for your procedure.';
+            } else if (assessment.medicalStatus === 'pregnant') {
+                document.getElementById('contraindicationMessage').style.display = 'block';
+                document.getElementById('contraindicationText').innerHTML = 'Congratulations on your pregnancy! Vision correction procedures are best performed after pregnancy when your vision has stabilized. We\'ll be ready to help you achieve clear vision when the time is right.';
+            } else if (assessment.medicalStatus === 'breastfeeding') {
+                document.getElementById('contraindicationMessage').style.display = 'block';
+                document.getElementById('contraindicationText').innerHTML = 'While breastfeeding, hormonal changes can affect your vision stability. We recommend waiting until after you\'ve finished breastfeeding for the most accurate and lasting results. Our team will help you plan for the optimal timing.';
+            }
+            
+            if (assessment.financing === 'financing' || assessment.financing === 'alpheon') {
+                document.getElementById('financingMessage').style.display = 'block';
+                document.getElementById('financingBtn').style.display = 'block';
+            }
+            
+            document.getElementById('results').classList.add('active');
+        }
+
+        function scheduleConsultation() {
+            window.open('https://www.khannainstitute.com/contact', '_blank');
+        }
+
+        function callNow() {
+            if (confirm('Would you like to call our Beverly Hills office?')) {
+                window.location.href = 'tel:3104821240';
+            }
+        }
+
+        function restart() {
+            assessment = {
+                age: '',
+                prescription: '',
+                lifestyle: '',
+                activities: [],
+                conditions: [],
+                medicalStatus: '',
+                goal: '',
+                financing: ''
+            };
+            currentQuestion = 1;
+            
+            document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                cb.checked = false;
+            });
+            
+            document.getElementById('results').classList.remove('active');
+            document.getElementById('analyzing').classList.remove('active');
+            document.getElementById('contraindicationMessage').style.display = 'none';
+            document.getElementById('financingMessage').style.display = 'none';
+            document.getElementById('financingBtn').style.display = 'none';
+            
+            showQuestion(1);
+            saveAssessment();
+        }
+    </script>
+</body>
+</html>
